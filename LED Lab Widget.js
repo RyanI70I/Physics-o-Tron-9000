@@ -7,7 +7,13 @@ function calcValues(){
 
 
     x = clac(A,B,C);
-    document.getElementById("O1").innerHTML = x + " V";
+    if( isNaN(x)){
+        document.getElementById("O1").innerHTML = "You did something wrong, -B/A was negative for some reason, how did you manage that?";
+
+    }
+    else
+        document.getElementById("O1").innerHTML = x + " V";
+
 
 
 
