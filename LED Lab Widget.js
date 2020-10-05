@@ -2,7 +2,7 @@ function calcValues(){
     var A = parseFloat(document.getElementById("I1").value);
     var B = parseFloat(document.getElementById("I2").value);
     var C = parseFloat(document.getElementById("I3").value);
-    var RMSE= parseFloat(document.getElementById("I4").value);
+    //var RMSE= parseFloat(document.getElementById("I4").value);
 
 
 
