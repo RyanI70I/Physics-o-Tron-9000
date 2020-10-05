@@ -4,25 +4,15 @@ function calcValues(){
     var C = parseFloat(document.getElementById("I3").value);
     //var RMSE= parseFloat(document.getElementById("I4").value);
 
+    let Voltage = clac(A, B, C);
 
-
-    x = clac(A,B,C);
-    if( isNaN(x)){
+    if( isNaN(Voltage)){
         document.getElementById("O1").innerHTML = "You did something wrong, -B/A was negative for some reason, how did you manage that?";
-
     }
     else
-        document.getElementById("O1").innerHTML = x + " V";
-
-
-
-
+        document.getElementById("O1").innerHTML = Voltage + " V";
 }
 
 function clac(a,b,c){
-    let y = .00001 - b;
-    y = y / a;
-    y = Math.log(y);
-    y = y/c;
-    return -y;
+    return -(Math.log((.00001 - b)/a))/c;
 }
