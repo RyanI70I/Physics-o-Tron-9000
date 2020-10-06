@@ -19,5 +19,5 @@ function calcValues(){
 
 //Calculate the voltage by finding V when I=.00001 in the fitting function
 function clac(a,b,c){
-    return -(Math.log((.00001 - b)/a))/c;
+    return -((Math.log((.00001 - b)/a))/c);
 }
